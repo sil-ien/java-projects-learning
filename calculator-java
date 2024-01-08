@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class CalculatorTester {
+	public static void main(String[] args) {
+		Scanner calc1 = new Scanner(System.in);
+		double firstNum;
+		double secondNum;
+		double answer;
+		String method;
+		System.out.println("Enter first number : ");
+		firstNum = calc1.nextDouble();
+		System.out.println("Enter Second number: ");
+		secondNum = calc1.nextDouble();
+		System.out.println("Enter Operator(+, -, *, or /): ");
+		method = calc1.next();
+		if (method.equals("+")) {
+			answer = firstNum + secondNum;
+			System.out.println(answer);
+		}
+		else if(method.equals("-")) {
+			answer = firstNum - secondNum;
+			System.out.println(answer);
+		}
+		else if(method.equals("*")){
+			answer = firstNum*secondNum;
+			System.out.println(answer);
+		}
+		else if(method.equals("/")) {
+			answer = firstNum/secondNum;
+			System.out.println(answer);
+		}
+		else
+			System.out.println("Unknown Operator");
+	}
+}
+
